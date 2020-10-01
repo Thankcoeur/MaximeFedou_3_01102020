@@ -1,0 +1,5 @@
+{
+    "beautify.config": "",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "liveServer.settings.CustomBrowser": "chrome"
+}

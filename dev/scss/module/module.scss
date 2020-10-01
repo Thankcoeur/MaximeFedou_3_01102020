@@ -1,0 +1,29 @@
+.btn-violet {
+    color: white;
+    margin: auto;
+    padding: 10px;
+    border-radius: 20px;
+    width: 220px;
+
+    background: rgb(228,112,218);
+    background: linear-gradient(183deg, rgba(228,112,218,1) 0%, rgba(165,92,220,1) 86%);
+}
+
+
+.numero {
+
+    $value1 : 30px ;
+    text-align: center;
+
+    line-height:$value1;
+
+    color: white;
+font-size: $value1 - 10px;
+
+    height: $value1;
+    width: $value1;
+    background-color: #a55cdc;
+    border-radius: $value1;
+
+
+   }

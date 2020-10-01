@@ -1,30 +1,7 @@
-@import "color","animation","FA/scss/fontawesome","FA/scss/solid","FA/scss/brands";
+@import "color","animation","../../FA/scss/fontawesome","../../FA/scss/solid","../../FA/scss/brands";
 
-html {
-
-  font-size: 16px;
-}
-a {
-
-  @extend .hover-link;
-
-  color: inherit;
-}
-* {
-
-  cursor: default;
-
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
-}
+@import "module/module.scss";
+@import "Layout/Layout.scss";
 
 .localisation {
   display: grid;
@@ -42,158 +19,13 @@ body {
 
 
 
-.header {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-row-gap: 50px;
-
-text-align: center;
-background-color: $color-header;
-padding: 20px;
 
 
 
-    &_callToAction {
-        color: white;
-        margin: auto;
-        padding: 10px;
-        border-radius: 20px;
-        width: 220px;
-
-        background: rgb(228,112,218);
-        background: linear-gradient(183deg, rgba(228,112,218,1) 0%, rgba(165,92,220,1) 86%);
-    }
-
-
-}
-
-.nav {
-    text-align: center;
-  height: 64px;
-
-
-    background-color: white;
-
-
-    &_logo {
-        padding: 20px 0 20px 0;
-    }
-}
-
-.fonctionnement {
-    padding: 20px;
-    display: grid;
-    grid-template-columns: 1fr ;
-    grid-row-gap: 20px;
-    i {
-
-        padding-right: 10px;
-    }
-    &_item {
-
-
-        display: grid;
-        grid-template-columns:  max-content 1fr  ;
-
-        grid-column-gap: 20px;
-        align-items: center;
-
-    }
-
-    &_texte {
-
-
-        border-radius: 10px;
 
 
 
-        padding: 10px;
 
-        padding-left: 20px;
-        background-color:$color-header ;
-
-    }
-
-    &_num {
-
-        $value1 : 30px ;
-        text-align: center;
-
-        line-height:$value1;
-
-        color: white;
-    font-size: $value1 - 10px;
-
-        height: $value1;
-        width: $value1;
-        background-color: #a55cdc;
-        border-radius: $value1;
-
-
-       }
-
-    }
-
-.restaurants {
-  padding: 20px;
-
-    display: grid;
-    grid-template-columns:  1fr ;
-    grid-row-gap: 50px;
-
-    padding-bottom: 50px;
-
-
-
-    background-color: $color-header;
-
-
-}
-
-.restaurant {
-  margin: auto;
-   background-color: white;
-    padding-bottom: 10px;
-    border-radius: 20px;
-    overflow: hidden;
-
-    @extend .animation-shadow ;
-
-    &_like {
-
-        text-align: right;
-        padding-right: 20px;
-
-
-        grid-column: 2/2;
-        grid-row: 2/2;
-    }
-
-    display: grid;
-    grid-row-gap: 10px;
-    grid-template-columns: 1fr 1fr ;
-    grid-template-rows: auto 1fr 1fr;
-
-    img {
-
-
-            $width : 300px;
-            width: $width;
-        height: $width*9/16;
-
-        grid-column-start: 1;
-        grid-column-end: 3;
-        grid-row-start: 1;
-        grid-row-end: 1;
-    }
-
-    &_title ,&_city {
-
-        padding-left: 20px;
-    }
-
-
-}
 
 
 .footer {
