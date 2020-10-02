@@ -1,0 +1,168 @@
+.blockmenu {
+  margin: auto;
+
+  padding: 20px;
+  background-color: #f6f6f6;
+
+
+  .li {
+
+
+    white-space: nowrap;
+    overflow: hidden;
+
+    text-overflow: ellipsis ;
+    align-items: stretch;
+
+
+
+    &:hover {
+
+      &:after {
+
+        animation:  linear 0.5s forwards rotation,linear 0.5s forwards validation;
+
+
+
+
+
+      }
+      &:before {
+        animation: linear 0.5s forwards validation;
+
+
+
+      }
+
+
+
+
+
+
+
+
+
+
+
+    }
+
+    border-radius: 20px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+
+
+
+
+
+
+    h4 {
+      padding-left: 10px;
+grid-row: 1;
+      grid-column: 1;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+
+    }
+
+    h5 {
+      padding-left:10px;
+      grid-column: 1;
+      grid-row: 2;
+
+
+
+
+    }
+
+    .prix {
+      text-align: center;
+      font-size: 24px;
+
+      grid-column: 2;
+      grid-row: 1/span 2 ;
+
+
+
+
+    }
+
+    &:after:first-line {
+
+
+      content: "coucou";
+    }
+  &::before {
+
+    content:"" ;
+    display: block;
+    width: 0px;
+    height: 100%;
+    z-index: 0;
+
+
+
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    overflow: hidden;
+
+
+
+    grid-row: 1 / span 2;
+    grid-column: 3;
+
+    background-color: #8eddc8;
+
+
+
+
+
+  }
+
+    &:after {
+
+
+
+
+
+      z-index: 10;
+
+
+
+
+
+
+
+
+
+    @extend .fas  ;
+      @extend .fa-check-circle ;
+
+      content:"\f058" ;
+
+
+
+      display: grid;
+      align-items: center;
+      justify-items: center;
+      overflow: hidden;
+      width: 0px;
+      height: 100%;
+
+
+      grid-row: 1 / span 2;
+      grid-column: 3;
+
+
+
+    }
+
+    background-color: white;
+
+
+  }
+}

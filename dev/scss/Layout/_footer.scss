@@ -1,0 +1,30 @@
+.footer {
+  font-weight: bold;
+  
+      background-color: #353535;
+      color: white;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-row-gap: 20px;
+      padding: 20px;
+    i {
+  
+      padding-right: 15px;
+    }
+      li {
+  
+  
+  
+          padding-bottom: 20px;
+          list-style: none;
+          color: white;
+         a {
+  
+             text-decoration: none;
+  
+         }
+      }
+  
+  
+  
+  }
