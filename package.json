@@ -1,0 +1,23 @@
+{
+  "name": "oc_project3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "sass": "^1.26.11"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "dev": "sass dev/scss/style.scss:public/css/style.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Thankcoeur/oc-project3.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Thankcoeur/oc-project3/issues"
+  },
+  "homepage": "https://github.com/Thankcoeur/oc-project3#readme"
+}
