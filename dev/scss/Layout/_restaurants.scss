@@ -15,7 +15,7 @@ grid-row-gap: 20px;
 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-column-gap: 20px;
+    
 }
 
 
@@ -32,6 +32,33 @@ grid-row-gap: 20px;
 }
 
 &__item {
+
+    &--new {
+        position: relative;
+
+ &::after {
+     position: absolute ;
+     right:10px;
+     top :10px;
+     
+
+        display: inline-block;
+        content :"Nouveau";
+        font-weight: 800;
+        
+        color : darken($color-grenn,30%);
+        width: auto;
+        
+        padding: 10px;
+        background:$color-grenn;
+        border-radius: 4px;
+
+
+    }
+
+
+    }
+   
     max-width: 300px;
     
    
@@ -59,7 +86,7 @@ grid-row-gap: 20px;
 
 &_like {
 
-    grid-row: 3;
+    grid-row: 2/span 2;
     grid-column: 2;
     justify-self: right;
     padding-right: 20px;
@@ -76,7 +103,7 @@ grid-row-gap: 20px;
     padding-left: 10px;
 
     grid-row: 3;
-    grid-template-columns: 1;
+    grid-column: 1;
 }
 
 img {

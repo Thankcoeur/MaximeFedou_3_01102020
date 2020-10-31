@@ -1,4 +1,16 @@
 .footer {
+
+
+a{
+  
+transition: color 0.5s ease-in-out;
+  &:hover {
+
+    color: gray;
+  }
+
+}
+
   font-weight: bold;
   
       background-color: #353535;

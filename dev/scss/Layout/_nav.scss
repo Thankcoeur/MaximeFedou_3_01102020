@@ -1,5 +1,14 @@
 .nav {
-    text-align: center;
+
+  &--main {
+
+.fleche {
+
+  display: none;
+}
+
+  }
+    
   height: 64px;
 
 
@@ -8,5 +17,21 @@
 
     &_logo {
         padding: 20px 0 20px 0;
+        text-align: center;
+    }
+
+    
+    
+    
+    .fleche {
+      i {
+
+        font-size: 40px;
+      }
+      font-size: large;
+      padding-left: 20px;
+
+      position: absolute;
+      margin-top: -65px;
     }
 }

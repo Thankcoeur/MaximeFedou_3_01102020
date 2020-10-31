@@ -6126,11 +6126,11 @@ readers do not read off random characters that represent icons */
   font-size: 16px;
   background: #e470da;
   background: linear-gradient(183deg, #e470da 0%, #a55cdc 86%);
-  box-shadow: 0px 0px 7px 0px rgba(50, 50, 50, 0.75);
-  transition: box-shadow 0.5s;
+  box-shadow: 2px 2px 4px 0px #e4e4e4;
+  transition: box-shadow 0.5s linear;
 }
 .btn-violet:hover {
-  box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.75);
+  box-shadow: 2px 2px 10px 0px #b1b1b1;
 }
 
 .heart {
@@ -6146,8 +6146,8 @@ readers do not read off random characters that represent icons */
 .heart:hover {
   color: black;
   background: linear-gradient(183deg, #e470da 0%, #a55cdc 86%);
-  background-clip: text;
   -webkit-background-clip: text;
+  -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 0px #6b6b6b;
 }
@@ -6208,11 +6208,12 @@ body {
 }
 
 a {
+  animation: none;
+  transition: none;
   text-decoration: none;
-  transition: filter 0.5s;
 }
 a:hover {
-  filter: brightness(0.8);
+  color: inherit;
 }
 
 .fonctionnement {
@@ -6222,6 +6223,7 @@ a:hover {
 .fonctionnement__items {
   padding-top: 20px;
   display: grid;
+  justify-items: center;
   grid-template-columns: 1fr;
   grid-row-gap: 20px;
 }
@@ -6235,9 +6237,8 @@ a:hover {
   padding-right: 10px;
 }
 .fonctionnement__item {
-  margin: auto;
-  box-sizing: border-box;
-  max-width: 400px;
+  width: 95%;
+  max-width: 350px;
   transition: filter 1s;
   display: grid;
   grid-template-columns: max-content 1fr;
@@ -6254,8 +6255,9 @@ a:hover {
   z-index: 20;
 }
 .fonctionnement_texte {
-  box-shadow: 0px 0px 7px 0px rgba(50, 50, 50, 0.75);
-  transition: box-shadow 0.5s;
+  text-align: center;
+  box-shadow: 2px 2px 4px 0px #e4e4e4;
+  transition: box-shadow 0.5s linear;
   padding: 20px;
   padding-top: 30px;
   padding-bottom: 30px;
@@ -6264,7 +6266,7 @@ a:hover {
   border-radius: 30px;
 }
 .fonctionnement_texte:hover {
-  box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.75);
+  box-shadow: 2px 2px 10px 0px #b1b1b1;
 }
 
 .header {
@@ -6282,17 +6284,28 @@ a:hover {
 }
 .header h2 {
   font-size: 18px;
-  font-weight: 0;
   color: #979797;
 }
 
 .nav {
-  text-align: center;
   height: 64px;
   background-color: white;
 }
+.nav--main .fleche {
+  display: none;
+}
 .nav_logo {
   padding: 20px 0 20px 0;
+  text-align: center;
+}
+.nav .fleche {
+  font-size: large;
+  padding-left: 20px;
+  position: absolute;
+  margin-top: -65px;
+}
+.nav .fleche i {
+  font-size: 40px;
 }
 
 .restaurants {
@@ -6310,7 +6323,6 @@ a:hover {
   .restaurants__items {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-column-gap: 20px;
   }
 }
 .restaurants__titre-principal {
@@ -6319,8 +6331,8 @@ a:hover {
 }
 .restaurants__item {
   max-width: 300px;
-  box-shadow: 0px 0px 7px 0px rgba(50, 50, 50, 0.75);
-  transition: box-shadow 0.5s;
+  box-shadow: 2px 2px 4px 0px #e4e4e4;
+  transition: box-shadow 0.5s linear;
   border-radius: 20px;
   overflow: hidden;
   display: grid;
@@ -6328,11 +6340,27 @@ a:hover {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 150px 40px 40px;
 }
+.restaurants__item--new {
+  position: relative;
+}
+.restaurants__item--new::after {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  display: inline-block;
+  content: "Nouveau";
+  font-weight: 800;
+  color: #31a183;
+  width: auto;
+  padding: 10px;
+  background: #8eddc8;
+  border-radius: 4px;
+}
 .restaurants__item:hover {
-  box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.75);
+  box-shadow: 2px 2px 10px 0px #b1b1b1;
 }
 .restaurants_like {
-  grid-row: 3;
+  grid-row: 2/span 2;
   grid-column: 2;
   justify-self: right;
   padding-right: 20px;
@@ -6345,7 +6373,7 @@ a:hover {
 .restaurants_city {
   padding-left: 10px;
   grid-row: 3;
-  grid-template-columns: 1;
+  grid-column: 1;
 }
 .restaurants img {
   width: 100%;
@@ -6451,11 +6479,11 @@ a:hover {
 }
 @media screen and (min-width: 900px) {
   .blockmenu .item:hover {
-    box-shadow: 0px 0px 7px 0px rgba(50, 50, 50, 0.75);
-    transition: box-shadow 0.5s;
+    box-shadow: 2px 2px 4px 0px #e4e4e4;
+    transition: box-shadow 0.5s linear;
   }
   .blockmenu .item:hover:hover {
-    box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.75);
+    box-shadow: 2px 2px 10px 0px #b1b1b1;
   }
 }
 .blockmenu .item:hover:after {
@@ -6530,6 +6558,12 @@ a:hover {
   grid-row-gap: 20px;
   padding: 0px;
 }
+.footer a {
+  transition: color 0.5s ease-in-out;
+}
+.footer a:hover {
+  color: gray;
+}
 .footer_title {
   padding-left: 20px;
   padding-top: 25px;
@@ -6550,19 +6584,6 @@ a:hover {
   text-decoration: none;
 }
 
-.navMenu {
-  display: grid;
-  text-align: center;
-  align-items: center;
-  height: 64px;
-}
-.navMenu .fleche {
-  position: absolute;
-  font-size: 25px;
-  line-height: 65px;
-  padding-left: 20px;
-}
-
 .headerMenu .image {
   width: 100%;
   max-width: 900px;
@@ -6574,6 +6595,7 @@ a:hover {
 }
 
 .spinner {
+  z-index: 100;
   display: block;
   position: fixed;
   width: 100%;
