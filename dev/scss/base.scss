@@ -3,6 +3,13 @@ html {
   font-family: 'Roboto', sans-serif;
     font-size: 16px;
   }
+
+
+  .shrik {
+
+    font-family: 'Shrikhand',sans-serif;
+
+  }
   a {
   
     @extend .hover-link;
@@ -25,16 +32,17 @@ html {
       box-sizing: border-box;
   }
 
-  h1 ,h2 {
+  
 
-    font-family: 'Shrikhand', cursive;
-
-
-
-  }
+ 
 
   a {
 text-decoration: none;
+transition: filter 0.5s;
+&:hover {
+
+  filter: brightness(0.8);
+}
 
 
 
