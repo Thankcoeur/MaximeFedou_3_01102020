@@ -1,6 +1,11 @@
-@import "color","animation","../../FA/scss/fontawesome","../../FA/scss/solid","../../FA/scss/brands";
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+@import "color","animation","../../FA/scss/fontawesome","../../FA/scss/solid","../../FA/scss/brands";
 @import "module/module.scss";
+@import "base.scss";
+
 @import "Layout/Layout.scss";
 
 

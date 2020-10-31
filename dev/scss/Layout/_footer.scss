@@ -6,10 +6,23 @@
       display: grid;
       grid-template-columns: 1fr;
       grid-row-gap: 20px;
-      padding: 20px;
-    i {
-  
-      padding-right: 15px;
+      padding: 0px;
+    
+
+    &_title {
+
+      padding-left: 20px;
+      padding-top: 25px;
+    }
+
+    ul {
+
+      padding-left: 20px;
+    }
+
+    i{
+
+      padding-right: 20px;
     }
       li {
   
@@ -19,6 +32,7 @@
           list-style: none;
           color: white;
          a {
+           color: white;
   
              text-decoration: none;
   

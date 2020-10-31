@@ -1,13 +1,16 @@
 .navMenu {
 
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    text-align: center;
     align-items: center;
     height: 64px;
-  
+ 
     .fleche {
-  
-      text-align: center;
+ position: absolute;
+      
+      font-size: 25px;
+      line-height:65px ;
+      padding-left: 20px;
     }
   
   }

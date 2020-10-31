@@ -70,13 +70,53 @@
 
   from {
 
-    transform: rotate(0deg);
+    transform: rotate(+180deg);
   }
 
   to {
 
-    transform: rotate(-80deg);
+    transform: rotate(0deg);
   }
+
+}
+
+
+@mixin Progress($delay) {
+
+  animation: Progress 0.5s linear $delay forwards;
+
+ opacity: 0;
+
+
+
+
+}
+
+
+
+@keyframes Progress {
+  from {
+
+    opacity: 0;
+
+
+
+  }
+
+  to {
+
+    opacity: 1;
+
+
+
+  }
+
+
+
+
+
+
+
 
 }
 

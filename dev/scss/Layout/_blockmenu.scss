@@ -1,11 +1,85 @@
 .blockmenu {
-  margin: auto;
+
+  @media all and (  min-width :900px) {
+    background-color: white;
+  }
+
+  h2 {
+    @extend .barre-verte ;
+
+    font-weight: 200;
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+
+ 
+
+
+  
+  
+  position: relative;
+margin-top: -80px;
+
+width: 100%;
+  border-radius: 30px 30px 0px 0px;
+  
+.commander  {
+
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+  header {
+    margin-bottom: 25px;
+
+display: flex;
+flex-direction: row;
+align-content: center;
+justify-content: space-between;
+
+
+
+  }
+
+  
+  
 
   padding: 20px;
   background-color: #f6f6f6;
 
 
-  .li {
+  .content {
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+
+    display: grid;
+    grid-row-gap: 15px;
+
+
+    
+  }
+  
+  @for $i from 1 through 10 {
+
+
+    .item:nth-child(#{$i}) {
+
+      @include Progress(#{$i/3}s)
+    }
+      
+      
+      }
+
+
+
+  }
+
+  .item {
+
+    
+
+    min-width: 350px;
+    height: 70px;
 
 
     white-space: nowrap;
@@ -59,36 +133,50 @@
 
 
     h4 {
+      font-size: 1rem;
+      
+      color: rgb(158, 158, 158);
       padding-left: 10px;
-grid-row: 1;
+grid-row: 2;
       grid-column: 1;
       overflow: hidden;
       text-overflow: ellipsis;
-
+      font-size: 12px;
 
     }
 
-    h5 {
+    h3 {font-size: 1.2rem;
       padding-left:10px;
       grid-column: 1;
-      grid-row: 2;
+      grid-row: 1;
 
 
-
+      overflow: hidden;
+      text-overflow: ellipsis;
 
     }
+
+    
 
     .prix {
       text-align: center;
-      font-size: 24px;
+      font-size: 18px ;
+      
 
       grid-column: 2;
-      grid-row: 1/span 2 ;
+      grid-row: 2 ;
+
+&::after {
+content: "\0020AC";
+color:black;
 
 
+}
 
 
     }
+
+    
 
     &:after:first-line {
 
@@ -143,6 +231,10 @@ grid-row: 1;
       @extend .fa-check-circle ;
 
       content:"\f058" ;
+      color: white;
+      font-size: 25px;
+
+      transform: rotate(-180deg);
 
 
 
@@ -165,4 +257,3 @@ grid-row: 1;
 
 
   }
-}
