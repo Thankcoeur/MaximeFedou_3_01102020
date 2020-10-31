@@ -4,7 +4,7 @@
 padding-top: 60px;
 padding-bottom: 60px;
 
-.content {
+ &__items {
 
 display: grid;
 justify-items: center;
@@ -36,7 +36,7 @@ grid-row-gap: 20px;
     
    
 
-    @extend .box-shadow ; 
+    @include box-shadow() ; 
     border-radius: 20px;
     overflow: hidden;
 

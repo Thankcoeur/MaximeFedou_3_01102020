@@ -6126,13 +6126,10 @@ readers do not read off random characters that represent icons */
   font-size: 16px;
   background: #e470da;
   background: linear-gradient(183deg, #e470da 0%, #a55cdc 86%);
-}
-
-.box-shadow, .restaurants__item, .fonctionnement_texte, .btn-violet {
   box-shadow: 0px 0px 7px 0px rgba(50, 50, 50, 0.75);
   transition: box-shadow 0.5s;
 }
-.box-shadow:hover, .restaurants__item:hover, .fonctionnement_texte:hover, .btn-violet:hover {
+.btn-violet:hover {
   box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.75);
 }
 
@@ -6222,21 +6219,22 @@ a:hover {
   padding: 20px;
   padding-top: 60px;
 }
-.fonctionnement .content {
+.fonctionnement__items {
   padding-top: 20px;
   display: grid;
   grid-template-columns: 1fr;
   grid-row-gap: 20px;
 }
 @media all and (min-width: 900px) {
-  .fonctionnement .content {
+  .fonctionnement__items {
     grid-template-columns: 1fr 1fr 1fr;
+    border-radius: 0px;
   }
 }
 .fonctionnement i {
   padding-right: 10px;
 }
-.fonctionnement_item {
+.fonctionnement__item {
   margin: auto;
   box-sizing: border-box;
   max-width: 400px;
@@ -6246,22 +6244,27 @@ a:hover {
   grid-column-gap: 20px;
   align-items: center;
 }
-.fonctionnement_item:hover {
+.fonctionnement__item:hover {
   filter: brightness(0.9);
 }
-.fonctionnement_item:hover .fas, .fonctionnement_item:hover .blockmenu .item:after, .blockmenu .fonctionnement_item:hover .item:after {
+.fonctionnement__item:hover .fas, .fonctionnement__item:hover .blockmenu .item:after, .blockmenu .fonctionnement__item:hover .item:after {
   color: #a55cdc;
 }
-.fonctionnement_item .numero {
+.fonctionnement__item .numero {
   z-index: 20;
 }
 .fonctionnement_texte {
+  box-shadow: 0px 0px 7px 0px rgba(50, 50, 50, 0.75);
+  transition: box-shadow 0.5s;
   padding: 20px;
   padding-top: 30px;
   padding-bottom: 30px;
   background-color: #f6f6f6;
   margin-left: -30px;
   border-radius: 30px;
+}
+.fonctionnement_texte:hover {
+  box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.75);
 }
 
 .header {
@@ -6298,13 +6301,13 @@ a:hover {
   padding-top: 60px;
   padding-bottom: 60px;
 }
-.restaurants .content {
+.restaurants__items {
   display: grid;
   justify-items: center;
   grid-row-gap: 20px;
 }
 @media all and (min-width: 900px) {
-  .restaurants .content {
+  .restaurants__items {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 20px;
@@ -6316,12 +6319,17 @@ a:hover {
 }
 .restaurants__item {
   max-width: 300px;
+  box-shadow: 0px 0px 7px 0px rgba(50, 50, 50, 0.75);
+  transition: box-shadow 0.5s;
   border-radius: 20px;
   overflow: hidden;
   display: grid;
   align-items: center;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 150px 40px 40px;
+}
+.restaurants__item:hover {
+  box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.75);
 }
 .restaurants_like {
   grid-row: 3;
@@ -6364,7 +6372,7 @@ a:hover {
 .blockmenu h2 {
   color: gray;
 }
-.blockmenu .commander {
+.blockmenu .btn-violet {
   margin-top: 50px;
   margin-bottom: 50px;
 }
@@ -6441,6 +6449,15 @@ a:hover {
   align-items: center;
   background-color: white;
 }
+@media screen and (min-width: 900px) {
+  .blockmenu .item:hover {
+    box-shadow: 0px 0px 7px 0px rgba(50, 50, 50, 0.75);
+    transition: box-shadow 0.5s;
+  }
+  .blockmenu .item:hover:hover {
+    box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.75);
+  }
+}
 .blockmenu .item:hover:after {
   animation: linear 0.5s forwards rotation, linear 0.5s forwards validation;
 }
@@ -6473,9 +6490,6 @@ a:hover {
 .blockmenu .item .prix::after {
   content: "€";
   color: black;
-}
-.blockmenu .item:after:first-line {
-  content: "coucou";
 }
 .blockmenu .item::before {
   content: "";

@@ -1,23 +1,4 @@
-.btn-violet {
-    color: white;
-    margin: auto;
-    padding: 15px;
-    border-radius: 20px;
-    min-width: 200px;
-    
-    text-align: center;
-    
-   
-    font-size: 16px;
-
-    background: rgb(228,112,218);
-    background: linear-gradient(183deg, rgba(228,112,218,1) 0%, rgba(165,92,220,1) 86%);
-    
-@extend .box-shadow ;
-}
-
-
-.box-shadow {
+@mixin box-shadow {
 
   box-shadow: 0px 0px 7px 0px rgba(50, 50, 50, 0.75);
 
@@ -33,6 +14,27 @@ transition: box-shadow 0.5s;
 
   
 }
+
+
+.btn-violet {
+    color: white;
+    margin: auto;
+    padding: 15px;
+    border-radius: 20px;
+    min-width: 200px;
+    
+    text-align: center;
+    
+   
+    font-size: 16px;
+
+    background: rgb(228,112,218);
+    background: linear-gradient(183deg, rgba(228,112,218,1) 0%, rgba(165,92,220,1) 86%);
+    
+@include box-shadow() ;
+}
+
+
 
 .heart {
   

@@ -1,40 +1,43 @@
 .fonctionnement {
-padding: 20px;
-padding-top: 60px;
-   
-    
-    .content {
-        @media all and ( min-width : 900px) {
-        
-    
+    padding: 20px;
+    padding-top: 60px;
+
+
+    &__items {
+        @media all and (min-width : 900px) {
+
+
 
             grid-template-columns: 1fr 1fr 1fr;
-     
+            border-radius: 0px;
+
         }
+
         padding-top: 20px;
 
-        
-    display: grid;
-    grid-template-columns: 1fr ;
-    
-    grid-row-gap: 20px;
+
+        display: grid;
+        grid-template-columns: 1fr;
+
+        grid-row-gap: 20px;
     }
-  
+
     i {
 
         padding-right: 10px;
     }
-    &_item {
-        
 
-       
+    &__item {
 
-        
-        
-        
-        margin: auto;  
+
+
+
+
+
+
+        margin: auto;
         box-sizing: border-box;
-        
+
         max-width: 400px;
         transition: filter 1s;
 
@@ -43,7 +46,7 @@ padding-top: 60px;
             filter: brightness(0.90);
 
             .fas {
-                color:$color-icone;
+                color: $color-icone;
 
 
 
@@ -51,14 +54,15 @@ padding-top: 60px;
 
 
         }
-        
+
 
 
         display: grid;
-        grid-template-columns:  max-content 1fr  ;
+        grid-template-columns: max-content 1fr;
 
         grid-column-gap: 20px;
         align-items: center;
+
         .numero {
 
             z-index: 20;
@@ -66,37 +70,37 @@ padding-top: 60px;
 
     }
 
-  
+
 
     &_texte {
 
-        @extend .box-shadow;
+        @include box-shadow();
         padding: 20px;
 
         padding-top: 30px;
         padding-bottom: 30px;
-        
-        
 
-       
+
+
+
 
         background-color: $color-header;
-       
+
 
         margin-left: -30px;
-       
+
 
 
         border-radius: 30px;
 
 
 
-       
-       
+
+
 
     }
 
-    
-    
 
-    }
+
+
+}
