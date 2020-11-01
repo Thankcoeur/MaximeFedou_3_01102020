@@ -1,36 +1,21 @@
 .nav {
-
   &--main {
-
 .fleche {
-
   display: none;
 }
-
   }
-    
   height: 64px;
-
-
     background-color: white;
-
-
     &_logo {
         padding: 20px 0 20px 0;
         text-align: center;
     }
-
-    
-    
-    
     .fleche {
       i {
-
         font-size: 30px;
       }
       font-size: large;
       padding-left: 20px;
-
       position: absolute;
       margin-top: -57px;
     }

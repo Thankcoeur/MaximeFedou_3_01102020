@@ -1,57 +1,35 @@
 .footer {
-
-
 a{
-  
 transition: color 0.5s ease-in-out;
   &:hover {
-
     color: gray;
   }
-
 }
-
   font-weight: bold;
-  
       background-color: #353535;
       color: white;
       display: grid;
       grid-template-columns: 1fr;
       grid-row-gap: 20px;
       padding: 0px;
-    
-
     &_title {
       @extend .shrik ; 
-
       padding-left: 20px;
       padding-top: 25px;
     }
-
     ul {
-
       padding-left: 20px;
     }
-
     i{
-
       padding-right: 20px;
     }
       li {
-  
-  
-  
           padding-bottom: 20px;
           list-style: none;
           color: white;
          a {
            color: white;
-  
              text-decoration: none;
-  
          }
       }
-  
-  
-  
   }

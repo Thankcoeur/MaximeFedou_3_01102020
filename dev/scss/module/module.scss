@@ -1,181 +1,87 @@
-
-
- 
-
  @keyframes anim {
-  from {
+   from {
+     opacity: 0;
+   }
+   to {
+     opacity: 1;
+   }
+ }
 
-    opacity: 0; 
-  }
+ @mixin btn-anim {
+   transition-property: filter, box-shadow;
+   transition-duration: 1s, 1s;
+   filter: brightness(1);
+   $color: #cecece;
+   box-shadow: 2px 2px 4px 0px $color;
+   &:hover {
+     $amount: 20%;
+     filter: brightness(1.1);
+     box-shadow: 2px 2px 10px 0px darken($color, $amount);
+   }
+ }
 
-  to {
+ .btn-violet {
+   @include btn-anim();
+   color: white;
+   margin: auto;
+   padding: 15px;
+   border-radius: 20px;
+   min-width: 200px;
+   text-align: center;
+   font-size: 16px;
+   background: rgb(228, 112, 218);
+   background: linear-gradient(183deg, rgba(228, 112, 218, 1) 0%, rgba(165, 92, 220, 1) 86%);
+ }
 
-    opacity:  1 ; 
+ .heart {
+   color: transparent;
+   font-size: 20px;
+   align-items: center;
+   -webkit-text-stroke: 1px rgb(107, 107, 107);
+   justify-content: center;
 
-
-
-  }
-
-  }
-
-  
-@mixin btn-anim {
-transition-property: filter,box-shadow;
-transition-duration: 1s , 1s;
-filter : brightness(1);
-$color : #cecece ;
-box-shadow: 2px 2px 4px 0px   $color ; 
-&:hover {
-  $amount : 20% ;
-  filter : brightness(1.1) ;
-
-  box-shadow: 2px 2px 10px 0px  darken($color, $amount) ;
-
-
-}
-
-}
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-.btn-violet {
-
-  @include btn-anim();
-  
-  
-
-   
-    color: white;
-    margin: auto;
-    padding: 15px;
-    border-radius: 20px;
-    min-width: 200px;
-    
-    text-align: center;
-    
-   
-    font-size: 16px;
-
-    background: rgb(228,112,218);
-    background: linear-gradient(183deg, rgba(228,112,218,1) 0%, rgba(165,92,220,1) 86%);
-    
-
-}
-
-
-
-.heart {
-  
-  
-  
-  
-    color: transparent;
-    font-size: 20px;
-    
-    align-items: center;
-    
-    -webkit-text-stroke: 1px rgb(107, 107, 107) ;
-    justify-content: center;
-    
-    &::before {
-
-      display: inline;
-      
-    }
-   
-    
-    
-    
-       
-    &:hover {color :black;
-      
-
-      
-      
-    
-      background:  linear-gradient(340deg, rgba(228,112,218,1) 0%, rgba(165,92,220,1) 86%);
-    
-     -webkit-background-clip: text;
-     -moz-background-clip: text;
-      
-      -webkit-text-fill-color: transparent;
-      
-      
-      -webkit-text-stroke: 0px rgb(107, 107, 107) ; 
-      
-    
-      
-    
-    }
-}
-
-
-.numero {
-  
-
-    $value1 : 25px ;
-    text-align: center;
-
-    line-height:$value1;
-
-    color: white;
-font-size: $value1 - 10px;
-
-    height: $value1;
-    width: $value1;
-    background-color: #a55cdc;
-    border-radius: $value1;
-
-
+   &::before {
+     display: inline;
    }
 
+   &:hover {
+     color: black;
+     background: linear-gradient(340deg, rgba(228, 112, 218, 1) 0%, rgba(165, 92, 220, 1) 86%);
+     -webkit-background-clip: text;
+     -moz-background-clip: text;
+     -webkit-text-fill-color: transparent;
+     -webkit-text-stroke: 0px rgb(107, 107, 107);
+   }
+ }
 
+ .numero {
+   $value1: 25px;
+   text-align: center;
+   line-height: $value1;
+   color: white;
+   font-size: $value1 - 10px;
+   height: $value1;
+   width: $value1;
+   background-color: #a55cdc;
+   border-radius: $value1;
+ }
 
+ .localisation {
+   text-align: center;
 
+   .loc-icon {
+     position: absolute;
+     margin-left: -30px;
+   }
 
+   padding: 10px;
+   background-color: $color-barre;
+   box-shadow: -1px 2px 10px 3px rgba(0, 0, 0, 0.3) inset;
+ }
 
-
-   .localisation {
-     text-align: center;
-     
-
-     .loc-icon {
-
-      position: absolute;
-     margin-left: -30px ;
-     }
-      
-  
-  
-  
-      padding: 10px;
-      background-color: $color-barre;
-      box-shadow: -1px 2px 10px 3px rgba(0, 0, 0, 0.3) inset;
-  }
-
-  .barre-verte::after {
-    content: "";
-    display: block;
-    width: 40px;
-
-    border-bottom: solid $color-grenn;
-
-
-
-  }
-
-
-
-
+ .barre-verte::after {
+   content: "";
+   display: block;
+   width: 40px;
+   border-bottom: solid $color-grenn;
+ }

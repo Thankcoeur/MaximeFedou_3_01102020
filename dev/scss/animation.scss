@@ -1,33 +1,18 @@
-
 .animation-shadow {
   -webkit-box-shadow: 0px 0px 4px 4px rgba(0,0,0,0.75);
   -moz-box-shadow: 0px 0px 4px 4px rgba(0,0,0,0.75);
   box-shadow: 0px 0px 4px 4px rgba(0,0,0,0.75);
-
 }
-
 .animation-shadow:hover {
-
-
-
   animation:  linear 0.2s forwards animation-shadow;
-
-
-
-  
 }
-
 @keyframes animation-shadow  {
-
   from {
-
     -webkit-box-shadow: 0px 0px 4px 4px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 0px 4px 4px rgba(0,0,0,0.75);
     box-shadow: 0px 0px 6px 4px rgba(0,0,0,0.75);
   }
-
   to {
-
     -webkit-box-shadow: 0px 0px 8px 10px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 0px 8px 10px rgba(0,0,0,0.75);
     box-shadow: 0px 0px 8px 10px rgba(0,0,0,0.75);
@@ -36,86 +21,34 @@
 }
 .validation:hover {
 .li:after {
-
-
     animation:  linear 0.5s forwards validation;
   }
-
 }
-
 @keyframes validation  {
-
   from {
-
     width: 0;
   }
-
   to {
     width: 100px;
-
-
   }
-
 }
-
-
-
-
-
-
 @keyframes rotation {
-
   from {
-
     transform: rotate(+180deg);
   }
-
   to {
-
     transform: rotate(0deg);
   }
-
 }
-
-
 @mixin Progress($delay) {
-
   animation: Progress 0.5s linear $delay forwards;
-
  opacity: 0;
-
-
-
-
 }
-
-
-
 @keyframes Progress {
   from {
-
     opacity: 0;
-
-
-
   }
-
   to {
-
     opacity: 1;
-
-
-
   }
-
-
-
-
-
-
-
-
 }
-
-
-
