@@ -3,6 +3,14 @@ html {
   font-family: 'Roboto', sans-serif;
     font-size: 16px;
   }
+  h3 {
+    
+
+    font-size: 18px;
+   
+   
+    
+}
 
 
   .shrik {
@@ -12,7 +20,7 @@ html {
   }
   a {
   
-    @extend .hover-link;
+    
   
     color: inherit;
   }
@@ -37,8 +45,8 @@ html {
  
 
   a {
-    animation: none;
-    transition: none;
+    
+   
 
 text-decoration: none;
 

@@ -1,24 +1,62 @@
-@mixin box-shadow {
 
-  $color : rgb(228, 228, 228); 
-  box-shadow: 2px 2px 4px 0px   $color ; 
 
-transition: box-shadow 0.5s linear;
+ 
+
+ @keyframes anim {
+  from {
+
+    opacity: 0; 
+  }
+
+  to {
+
+    opacity:  1 ; 
+
+
+
+  }
+
+  }
+
+  
+@mixin btn-anim {
+transition-property: filter,box-shadow;
+transition-duration: 1s , 1s;
+filter : brightness(1);
+$color : #cecece ;
+box-shadow: 2px 2px 4px 0px   $color ; 
 &:hover {
   $amount : 20% ;
+  filter : brightness(1.1) ;
 
   box-shadow: 2px 2px 10px 0px  darken($color, $amount) ;
 
 
-
+}
 
 }
+
+
+
+
+
 
   
-}
+
+
+
+
+
+
 
 
 .btn-violet {
+
+  @include btn-anim();
+  
+  
+
+   
     color: white;
     margin: auto;
     padding: 15px;
@@ -33,7 +71,7 @@ transition: box-shadow 0.5s linear;
     background: rgb(228,112,218);
     background: linear-gradient(183deg, rgba(228,112,218,1) 0%, rgba(165,92,220,1) 86%);
     
-@include box-shadow() ;
+
 }
 
 
@@ -56,16 +94,24 @@ transition: box-shadow 0.5s linear;
       display: inline;
       
     }
-    
    
+    
+    
+    
        
     &:hover {color :black;
-      background:  linear-gradient(183deg, rgba(228,112,218,1) 0%, rgba(165,92,220,1) 86%);
+      
+
+      
+      
+    
+      background:  linear-gradient(340deg, rgba(228,112,218,1) 0%, rgba(165,92,220,1) 86%);
     
      -webkit-background-clip: text;
      -moz-background-clip: text;
       
       -webkit-text-fill-color: transparent;
+      
       
       -webkit-text-stroke: 0px rgb(107, 107, 107) ; 
       

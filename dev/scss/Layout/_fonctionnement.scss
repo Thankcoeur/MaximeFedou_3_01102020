@@ -30,7 +30,7 @@
     }
 
     &__item {
-        
+      
 
         
 
@@ -43,17 +43,18 @@
         
         width: 95%;
         max-width: 350px;
-        transition: filter 1s;
+       
 
         .fas {
 
-
+           color : #7e7e7e;
             
         }
 
         &:hover {
 
-            filter: brightness(0.90);
+
+            
 
             .fas {
                 color: $color-icone;
@@ -85,11 +86,16 @@
 
 
     &_texte {
+
+        @include btn-anim() ; 
+        
+
+        
         
         
         text-align: center;
 
-        @include box-shadow();
+        
         padding: 20px;
 
         padding-top: 30px;

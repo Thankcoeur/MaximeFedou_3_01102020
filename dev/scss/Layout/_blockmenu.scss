@@ -1,9 +1,25 @@
+
+
+
+@for $i from 1 through 10 {
+
+
+  .blockmenu  .item:nth-of-type(#{$i}) {
+
+    @include Progress(#{$i/3}s)
+  }
+    
+    
+    }
+
+
 .blockmenu {
   display: grid;
   align-items: center;
 
   @media all and (  min-width :900px) {
     background-color: white;
+    border-radius: 0px;
   }
 
   
@@ -72,19 +88,12 @@ justify-content: space-between;
     
   }
   
-  @for $i from 1 through 10 {
-
-
-    .item:nth-child(#{$i}) {
-
-      @include Progress(#{$i/3}s)
-    }
-      
-      
-      }
+  
 
 
       .item {
+
+        
       
 
     
@@ -98,11 +107,19 @@ justify-content: space-between;
     
         text-overflow: ellipsis ;
         align-items: stretch;
+        @media screen and (max-width:900px) {
+
+          @include btn-anim();
+
+        }
     
       @media screen and (min-width :900px) {
-        &:hover {
+        
 
-          @include box-shadow(); 
+        &:hover {
+          
+@include btn-anim();
+         
         }
         
       }
