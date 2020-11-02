@@ -1,5 +1,5 @@
 @for $i from 1 through 10 {
-  .blockmenu.item:nth-of-type(#{$i}) {
+  .blockmenu .item:nth-child(#{$i}) {
     @include Progress(#{$i/3}s)
   }
 }
