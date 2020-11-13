@@ -6124,7 +6124,7 @@ readers do not read off random characters that represent icons */
   transition-property: filter, box-shadow;
   transition-duration: 1s, 1s;
   filter: brightness(1);
-  box-shadow: 2px 2px 4px 0px #cecece;
+  box-shadow: 0px 0px 4px 0px #cecece;
   color: white;
   margin: auto;
   padding: 15px;
@@ -6137,9 +6137,17 @@ readers do not read off random characters that represent icons */
 }
 .btn-violet:hover {
   filter: brightness(1.1);
-  box-shadow: 2px 2px 10px 0px #9b9b9b;
+  box-shadow: 0px 0px 10px 0px #020202;
 }
 
+@keyframes remplissage {
+  0% {
+    background-position: 0% -700%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
 .heart {
   color: transparent;
   font-size: 20px;
@@ -6151,8 +6159,10 @@ readers do not read off random characters that represent icons */
   display: inline;
 }
 .heart:hover {
-  color: black;
-  background: linear-gradient(340deg, #e470da 0%, #a55cdc 86%);
+  background: linear-gradient(0deg, #e470da 20%, #a55cdc 86%);
+  background-repeat: no-repeat;
+  background-size: 120% 120%;
+  animation: remplissage 1s ease backwards;
   -webkit-background-clip: text;
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -6195,6 +6205,10 @@ html {
 
 h3 {
   font-size: 18px;
+}
+
+figcaption {
+  font-weight: 900;
 }
 
 .shrik, .footer_title {
@@ -6266,7 +6280,7 @@ a:hover {
   transition-property: filter, box-shadow;
   transition-duration: 1s, 1s;
   filter: brightness(1);
-  box-shadow: 2px 2px 4px 0px #cecece;
+  box-shadow: 0px 0px 4px 0px #cecece;
   text-align: center;
   padding: 20px;
   padding-top: 30px;
@@ -6277,23 +6291,25 @@ a:hover {
 }
 .fonctionnement_texte:hover {
   filter: brightness(1.1);
-  box-shadow: 2px 2px 10px 0px #9b9b9b;
+  box-shadow: 0px 0px 10px 0px #020202;
 }
 
 .header {
   display: grid;
   grid-template-columns: 1fr;
-  grid-row-gap: 50px;
+  grid-row-gap: 0px;
   text-align: center;
   background-color: #f6f6f6;
-  padding: 20px;
   padding-bottom: 60px;
 }
 .header h1 {
+  padding-top: 50px;
   font-size: 30px;
   font-weight: 800;
 }
 .header h2 {
+  padding-top: 50px;
+  padding-bottom: 50px;
   color: #7e7e7e;
 }
 
@@ -6312,7 +6328,7 @@ a:hover {
   font-size: large;
   padding-left: 20px;
   position: absolute;
-  margin-top: -57px;
+  margin-top: -59px;
 }
 .nav .fleche i {
   font-size: 30px;
@@ -6345,7 +6361,7 @@ a:hover {
   transition-property: filter, box-shadow;
   transition-duration: 1s, 1s;
   filter: brightness(1);
-  box-shadow: 2px 2px 4px 0px #cecece;
+  box-shadow: 0px 0px 4px 0px #cecece;
   max-width: 300px;
   border-radius: 20px;
   overflow: hidden;
@@ -6356,7 +6372,7 @@ a:hover {
 }
 .restaurants__item:hover {
   filter: brightness(1.1);
-  box-shadow: 2px 2px 10px 0px #9b9b9b;
+  box-shadow: 0px 0px 10px 0px #020202;
 }
 .restaurants__item--new {
   position: relative;
@@ -6378,7 +6394,10 @@ a:hover {
   grid-row: 2/span 2;
   grid-column: 2;
   justify-self: right;
-  padding-right: 20px;
+  padding-right: 5px;
+}
+.restaurants_like .heart {
+  width: 35px;
 }
 .restaurants_title {
   padding-left: 10px;
@@ -6470,14 +6489,14 @@ a:hover {
   margin-top: 50px;
   margin-bottom: 50px;
 }
-.blockmenu header {
+.blockmenu__header {
   margin-bottom: 25px;
   display: flex;
   flex-direction: row;
   align-content: center;
   justify-content: space-between;
 }
-.blockmenu header .heart {
+.blockmenu__header .heart {
   width: 40px;
   font-size: 30px;
   display: grid;
@@ -6508,11 +6527,11 @@ a:hover {
     transition-property: filter, box-shadow;
     transition-duration: 1s, 1s;
     filter: brightness(1);
-    box-shadow: 2px 2px 4px 0px #cecece;
+    box-shadow: 0px 0px 4px 0px #cecece;
   }
   .blockmenu .item:hover {
     filter: brightness(1.1);
-    box-shadow: 2px 2px 10px 0px #9b9b9b;
+    box-shadow: 0px 0px 10px 0px #020202;
   }
 }
 @media screen and (min-width: 900px) {
@@ -6520,11 +6539,11 @@ a:hover {
     transition-property: filter, box-shadow;
     transition-duration: 1s, 1s;
     filter: brightness(1);
-    box-shadow: 2px 2px 4px 0px #cecece;
+    box-shadow: 0px 0px 4px 0px #cecece;
   }
   .blockmenu .item:hover:hover {
     filter: brightness(1.1);
-    box-shadow: 2px 2px 10px 0px #9b9b9b;
+    box-shadow: 0px 0px 10px 0px #020202;
   }
 }
 .blockmenu .item:hover:after {
@@ -6642,7 +6661,6 @@ a:hover {
   width: 100%;
   height: 100%;
   background-color: black;
-  opacity: 0.5;
   animation: end 1s step-end forwards;
   display: grid;
   align-items: center;

@@ -12,11 +12,11 @@
    transition-duration: 1s, 1s;
    filter: brightness(1);
    $color: #cecece;
-   box-shadow: 2px 2px 4px 0px $color;
+   box-shadow: 0px 0px 4px 0px $color;
    &:hover {
-     $amount: 20%;
+     $amount: 80%;
      filter: brightness(1.1);
-     box-shadow: 2px 2px 10px 0px darken($color, $amount);
+     box-shadow: 0px 0px 10px 0px darken($color, $amount);
    }
  }
 
@@ -33,20 +33,45 @@
    background: linear-gradient(183deg, rgba(228, 112, 218, 1) 0%, rgba(165, 92, 220, 1) 86%);
  }
 
+
+
+
+
+@keyframes remplissage {
+	0% {
+		background-position:   0% -700%; ;
+	}
+	
+	100% {
+		background-position: 0% 0% ; 
+	}
+}
+
  .heart {
+  
+   
    color: transparent;
    font-size: 20px;
    align-items: center;
    -webkit-text-stroke: 1px rgb(107, 107, 107);
    justify-content: center;
-
+ 
    &::before {
      display: inline;
    }
 
    &:hover {
-     color: black;
-     background: linear-gradient(340deg, rgba(228, 112, 218, 1) 0%, rgba(165, 92, 220, 1) 86%);
+
+  background: linear-gradient(0deg, rgba(228, 112, 218, 1) 20%, rgba(165, 92, 220, 1) 86% ) ;
+  background-repeat: no-repeat;
+	background-size: 120% 120%;
+	animation: remplissage 1s ease backwards;
+     
+
+  
+   
+     
+     
      -webkit-background-clip: text;
      -moz-background-clip: text;
      -webkit-text-fill-color: transparent;
